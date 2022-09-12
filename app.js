@@ -14,7 +14,23 @@ app.get('/',(req, res)=>{
 })
 //detalleMenu
 app.get('/detalleMenu',(req, res)=>{
-    res.render('detalleMenu')
+    res.render('detalleMenu',{menus: menus})
+})
+
+app.get('/detalleMenu/1',(req, res)=>{
+    res.render('detalleMenu',{menus: menus[0]})
+})
+
+app.get('/detalleMenu/2',(req, res)=>{
+    res.render('detalleMenu',{menus: menus[1]})
+})
+
+app.get('/detalleMenu/3',(req, res)=>{
+    res.render('detalleMenu',{menus: menus[2]})
+})
+
+app.get('/detalleMenu/4',(req, res)=>{
+    res.render('detalleMenu',{menus: menus[3]})
 })
 
 app.set('view engine', 'ejs');
